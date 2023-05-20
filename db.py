@@ -9,11 +9,7 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-con = pymysql.connect(host='localhost', user='root', password='1234',
-                      db='data', charset='utf8', # 한글처리 (charset = 'utf8')
-                      autocommit=True, # 결과 DB 반영 (Insert or update)
-                      cursorclass=pymysql.cursors.DictCursor # DB조회시 컬럼명을 동시에 보여줌
-                     )
+con = pymysql.connect(host='localhost', user='root', password='',db='data', charset='utf8', autocommit=True, cursorclass=pymysql.cursors.DictCursor)
 cur = con.cursor()
 
 url = 'http://openapi.seoul.go.kr:8088/66656f464677616c36325670547576/xml/culturalEventInfo/1/1000'
